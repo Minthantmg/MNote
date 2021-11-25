@@ -10,4 +10,7 @@
     <string name="personal">Personal</string>
     <string name="shopping">Shopping</string>
     <string name="todo">Todo</string>
+    <string name="label">Label</string>
+    <string name="enter_the_label">Enter the Label</string>
+    <string name="add">Add</string>
 </resources>
