@@ -61,7 +61,7 @@
 
     <com.google.android.material.chip.ChipGroup
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:padding="5dp"
@@ -76,17 +76,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#EFE58F"
-            android:textColor="@color/teal_700"
-            android:text="@string/work" />
+            android:minHeight="48dp"
+            android:text="@string/work"
+            android:textColor="@color/teal_700" />
 
         <com.google.android.material.chip.Chip
             style="@style/Widget.MaterialComponents.Chip.Choice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#EFE58F"
-            android:textColor="@color/teal_700"
             android:layout_marginStart="10dp"
-            android:text="@string/personal" />
+            android:backgroundTint="#EFE58F"
+            android:minHeight="48dp"
+            android:text="@string/personal"
+            android:textColor="@color/teal_700" />
 
         <com.google.android.material.chip.Chip
             style="@style/Widget.MaterialComponents.Chip.Choice"
