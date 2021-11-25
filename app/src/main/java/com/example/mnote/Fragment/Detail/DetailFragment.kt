@@ -56,9 +56,7 @@ class DetailFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-         if(item.itemId == R.id.detail_search){
-            findNavController().navigate(R.id.action_detailFragment_to_searchFragment)
-        }else if (item.itemId == R.id.detail_dot){
+         if(item.itemId == R.id.detail_dot){
 
         }
         return super.onOptionsItemSelected(item)
