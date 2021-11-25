@@ -40,14 +40,15 @@ class DetailFragment : Fragment() {
         val label = label_et.text.toString()
         val text = text_et.text
 
-        if(inputCheck(title,label,text)){
+        if (title.isEmpty() || label.isEmpty()){
+            Toast.makeText(requireContext(),"Please fill all Fields!!",Toast.LENGTH_LONG).show()
+        }else{
             val texts = User(0,title,label,text.toString())
             mViewModel.addTitle(texts)
             Toast.makeText(requireContext(),"Successfully added!",Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_detailFragment_to_listFragment)
-        }else{
-            Toast.makeText(requireContext(),"Please fill all Fields!!",Toast.LENGTH_LONG).show()
         }
+
 
     }
 
@@ -61,10 +62,5 @@ class DetailFragment : Fragment() {
         }
         return super.onOptionsItemSelected(item)
     }
-
-    private fun inputCheck(title : String,label : String,text : Editable):Boolean{
-        return !(TextUtils.isEmpty(title) && TextUtils.isEmpty(label) && text.isEmpty())
-    }
-
-
+    
 }
