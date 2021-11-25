@@ -15,7 +15,7 @@
         app:showAsAction="ifRoom"/>
 
     <item android:id="@+id/detail_dot"
-        android:title="search"
+        android:title="more"
         android:icon="@drawable/ic_more"
         android:iconTint="@color/white"
         app:showAsAction="ifRoom"/>
