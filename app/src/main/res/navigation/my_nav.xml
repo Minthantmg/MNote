@@ -14,9 +14,6 @@
             android:id="@+id/action_listFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
         <action
-            android:id="@+id/action_listFragment_to_favouriteFragment"
-            app:destination="@id/favouriteFragment" />
-        <action
             android:id="@+id/action_listFragment_to_searchFragment"
             app:destination="@id/searchFragment" />
     </fragment>
@@ -29,23 +26,8 @@
             android:id="@+id/action_detailFragment_to_listFragment"
             app:destination="@id/listFragment" />
         <action
-            android:id="@+id/action_detailFragment_to_favouriteFragment"
-            app:destination="@id/favouriteFragment" />
-        <action
             android:id="@+id/action_detailFragment_to_searchFragment"
             app:destination="@id/searchFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/favouriteFragment"
-        android:name="com.example.mnote.Fragment.Favourite.FavouriteFragment"
-        android:label="Favourite"
-        tools:layout="@layout/fragment_favourite" >
-        <action
-            android:id="@+id/action_favouriteFragment_to_listFragment"
-            app:destination="@id/listFragment" />
-        <action
-            android:id="@+id/action_favouriteFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"

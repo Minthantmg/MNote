@@ -31,9 +31,7 @@ class ListFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.menu_fav){
-                findNavController().navigate(R.id.action_listFragment_to_favouriteFragment)
-        }else if(item.itemId == R.id.menu_search){
+        if(item.itemId == R.id.menu_search){
                 findNavController().navigate(R.id.action_listFragment_to_searchFragment)
         }
         return super.onOptionsItemSelected(item)

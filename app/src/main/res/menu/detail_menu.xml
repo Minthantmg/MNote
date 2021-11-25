@@ -2,11 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/detail_fav"
-        android:title="favourite"
-        android:icon="@drawable/ic_fav"
-        android:iconTint="@color/white"
-        app:showAsAction="ifRoom"/>
 
     <item android:id="@+id/detail_search"
         android:title="search"
