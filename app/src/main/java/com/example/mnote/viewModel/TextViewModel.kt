@@ -27,9 +27,21 @@ class TextViewModel(application : Application) : AndroidViewModel(application) {
         }
     }
 
-    fun deleteAllUsers() {
+    fun deleteAllTexts() {
         viewModelScope.launch(Dispatchers.IO) {
-            repository.deleteAllUser()
+            repository.deleteAllText()
+        }
+    }
+
+    fun deleteText(text : User) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.deleteText(text)
+        }
+    }
+
+    fun updateText(text : User){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.updateText(text)
         }
     }
 }

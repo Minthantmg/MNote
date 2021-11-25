@@ -3,6 +3,7 @@ package com.example.mnote.Fragment.List
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mnote.R
 import com.example.mnote.model.User
@@ -24,6 +25,10 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
             title_list.text = currentItem.title
             lable_list.text = currentItem.label
             text_list.text = currentItem.body
+            cardView.setOnClickListener {
+            val action = ListFragmentDirections.actionListFragmentToEditFragment(currentItem)
+                    holder.itemView.findNavController().navigate(action)
+            }
         }
     }
 

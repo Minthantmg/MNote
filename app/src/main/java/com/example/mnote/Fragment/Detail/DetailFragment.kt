@@ -62,5 +62,5 @@ class DetailFragment : Fragment() {
         }
         return super.onOptionsItemSelected(item)
     }
-    
+
 }

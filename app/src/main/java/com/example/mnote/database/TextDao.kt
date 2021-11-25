@@ -1,10 +1,7 @@
 package com.example.mnote.database
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.example.mnote.model.User
 
 @Dao
@@ -18,4 +15,10 @@ interface TextDao {
 
     @Query("DELETE FROM user_table")
     fun deleteAllUser()
+
+    @Update
+    fun updateUser(user : User)
+
+    @Delete
+    fun deleteText(user : User)
 }

@@ -59,7 +59,7 @@ class ListFragment : Fragment() {
     private fun deleteAllTexts() {
         val builder = AlertDialog.Builder(requireContext())
         builder.setPositiveButton("Yes"){_,_ ->
-            mTextViewModel.deleteAllUsers()
+            mTextViewModel.deleteAllTexts()
             Toast.makeText(requireContext(),"Successfully Deleted everything!", Toast.LENGTH_LONG).show()
         }
         builder.setNegativeButton("No"){_,_ ->}

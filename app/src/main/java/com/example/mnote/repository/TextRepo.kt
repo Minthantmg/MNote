@@ -2,6 +2,7 @@ package com.example.mnote.repository
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import androidx.room.Delete
 import com.example.mnote.database.TextDao
 import com.example.mnote.model.User
 import kotlinx.coroutines.Dispatchers
@@ -16,7 +17,16 @@ class TextRepo (private val textDao : TextDao){
         textDao.addTitle(text)
     }
 
-    fun deleteAllUser(){
+
+
+    fun deleteAllText(){
         textDao.deleteAllUser()
+    }
+    fun updateText(text : User){
+        textDao.updateUser(text)
+    }
+
+    fun deleteText(text : User){
+        textDao.deleteText(text)
     }
 }
