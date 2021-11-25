@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MNote</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">Title</string>
+    <string name="enter_the_title">Enter the title</string>
+    <string name="choose_label">Choose label :</string>
+    <string name="new_label">+ New label</string>
+    <string name="work">Work</string>
+    <string name="personal">Personal</string>
+    <string name="shopping">Shopping</string>
+    <string name="todo">Todo</string>
+</resources>
