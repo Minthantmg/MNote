@@ -1,4 +1,4 @@
-package com.example.mnote
+package com.example.mnote.Fragment.Edit
 
 import android.app.AlertDialog
 import android.os.Bundle
@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.example.mnote.R
 import com.example.mnote.model.User
 import com.example.mnote.viewModel.TextViewModel
 import kotlinx.android.synthetic.main.fragment_edit.*

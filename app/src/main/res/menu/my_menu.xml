@@ -9,8 +9,8 @@
         app:showAsAction="ifRoom"/>
 
     <item android:id="@+id/menu_delete"
-        android:title="delete"
+        android:title="delete All"
         android:icon="@drawable/ic_delete"
         android:iconTint="@color/white"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="collapseActionView"/>
 </menu>

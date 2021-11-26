@@ -31,7 +31,7 @@ class DetailFragment : Fragment() {
         }
 
 
-        setHasOptionsMenu(true)
+
         return view
     }
 
@@ -40,27 +40,13 @@ class DetailFragment : Fragment() {
         val label = label_et.text.toString()
         val text = text_et.text
 
-        if (title.isEmpty() || label.isEmpty()){
-            Toast.makeText(requireContext(),"Please fill all Fields!!",Toast.LENGTH_LONG).show()
-        }else{
-            val texts = User(0,title,label,text.toString())
+        if (title.isEmpty() || label.isEmpty()) {
+            Toast.makeText(requireContext(), "Please fill all Fields!!", Toast.LENGTH_LONG).show()
+        } else {
+            val texts = User(0, title, label, text.toString())
             mViewModel.addTitle(texts)
-            Toast.makeText(requireContext(),"Successfully added!",Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(), "Successfully added!", Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_detailFragment_to_listFragment)
         }
-
-
     }
-
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.detail_menu,menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-         if(item.itemId == R.id.detail_dot){
-
-        }
-        return super.onOptionsItemSelected(item)
-    }
-
 }

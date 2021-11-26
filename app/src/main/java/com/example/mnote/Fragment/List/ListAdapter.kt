@@ -23,8 +23,8 @@ class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         val currentItem = textList[position]
         holder.itemView.apply {
             title_list.text = currentItem.title
-            lable_list.text = currentItem.label
             text_list.text = currentItem.body
+            lable_list.text = currentItem.label
             cardView.setOnClickListener {
             val action = ListFragmentDirections.actionListFragmentToEditFragment(currentItem)
                     holder.itemView.findNavController().navigate(action)

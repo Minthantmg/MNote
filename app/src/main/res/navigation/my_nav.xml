@@ -46,7 +46,7 @@
     </fragment>
     <fragment
         android:id="@+id/editFragment"
-        android:name="com.example.mnote.EditFragment"
+        android:name="com.example.mnote.Fragment.Edit.EditFragment"
         android:label="fragment_edit"
         tools:layout="@layout/fragment_edit" >
         <action
