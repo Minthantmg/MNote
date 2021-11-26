@@ -44,4 +44,8 @@ class TextViewModel(application : Application) : AndroidViewModel(application) {
             repository.updateText(text)
         }
     }
+
+    fun searchDatabase(searchQuery : String): LiveData<List<User>>{
+        return repository.searchDatabase(searchQuery)
+    }
 }

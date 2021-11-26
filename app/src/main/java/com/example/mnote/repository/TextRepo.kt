@@ -29,4 +29,8 @@ class TextRepo (private val textDao : TextDao){
     fun deleteText(text : User){
         textDao.deleteText(text)
     }
+
+    fun searchDatabase(searchQuery : String): LiveData<List<User>>{
+        return textDao.searchDatabase(searchQuery)
+    }
 }

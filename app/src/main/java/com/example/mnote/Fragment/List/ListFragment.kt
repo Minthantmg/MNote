@@ -3,6 +3,7 @@ package com.example.mnote.Fragment.List
 import android.app.AlertDialog
 import android.os.Bundle
 import android.view.*
+import android.widget.SearchView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -14,7 +15,7 @@ import com.example.mnote.viewModel.TextViewModel
 import kotlinx.android.synthetic.main.fragment_list.view.*
 
 
-class ListFragment : Fragment() {
+class ListFragment : Fragment(){
 
     private lateinit var mTextViewModel : TextViewModel
 
@@ -45,12 +46,35 @@ class ListFragment : Fragment() {
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.my_menu,menu)
+//        val search = menu?.findItem(R.id.menu_search)
+//        val searchView = search?.actionView as? SearchView
+//        searchView?.isSubmitButtonEnabled = true
+//        searchView?.setOnQueryTextListener(this)
     }
 
+//    override fun onQueryTextSubmit(query: String?): Boolean {
+//        return true
+//    }
+//
+//    override fun onQueryTextChange(query: String?): Boolean {
+//        if (query != null){
+//            searchDatabase(query)
+//        }
+//        return true
+//    }
+//
+//    private fun searchDatabase(query: String){
+//        val searchQuery = "%$query%"
+//
+//        mTextViewModel.searchDatabase(searchQuery).observe(this,{ list ->
+//            list.let {
+//               adapter.setData(it)
+//            }
+//        })
+//    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(item.itemId == R.id.menu_search){
-                findNavController().navigate(R.id.action_listFragment_to_searchFragment)
-        }else if(item.itemId == R.id.menu_delete){
+        if(item.itemId == R.id.menu_delete){
             deleteAllTexts()
         }
         return super.onOptionsItemSelected(item)
@@ -67,6 +91,8 @@ class ListFragment : Fragment() {
         builder.setMessage("Are u sure you want to delete Everything?")
         builder.create().show()
     }
+
+
 
 
 }
